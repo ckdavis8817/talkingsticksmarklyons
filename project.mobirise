@@ -47,7 +47,7 @@
     "gdpr": "",
     "siteUrl": "undefined",
     "versionFirst": "4.7.6",
-    "uniqCompNum": 65,
+    "uniqCompNum": 66,
     "versionPublish": "4.7.6",
     "screenshot": "screenshot.png"
   },
@@ -647,6 +647,43 @@
           "_customHTML": "<section class=\"header6 video-with-lightbox\" group=\"Headers\" plugins=\"amp-main,amp-lightbox,amp-youtube\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Btn Play Color\" name=\"playColor\" value=\"#f70505\">\n        <input type=\"range\" inline title=\"Btn PLay Size\" name=\"playSize\" min=\"1\" max=\"10\" value=\"3.5\" step=\"0.5\">\n        <input type=\"checkbox\" title=\"Show Signature\" name=\"showSignature\" checked>\n        <input type=\"text\" title=\"Youtube Video URL\" name=\"videoUrl\" value=\"https://www.youtube.com/watch?v=IvS0nX55ARg\">\n        \n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/talkingstickbgrd-1-1600x1200.png\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#f6efe9\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">    \n        <h1 class=\"mbr-section-title mbr-fonts-style align-center mbr-black l-spacing3\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">Your Miracle Is In The Message</h1>\n        \n        <p class=\"mbr-fonts-style mbr-text align-center mbr-black\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn,.btn-wrap\">\n             Click on the icon to change it. If you add a link to your icon, when you click on it, <br>\nyour link will be opened instead of a pop-up video\n        </p>\n\n        <amp-lightbox id=\"my-lightbox\" layout=\"nodisplay\">\n          <div class=\"lightbox\" on=\"tap:my-lightbox.close\" role=\"button\" tabindex=\"0\">\n            <div class=\"container\">\n                <div class=\"video-block\">\n                    <amp-youtube width=\"16\" height=\"9\" layout=\"responsive\" data-videoid=\"lBTCB7yLs8Y\" class=\"mobirise-loader\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </amp-youtube>\n                </div>\n            </div>\n          </div>\n        </amp-lightbox>\n        <!-- mbr-icon -->\n        <div class=\"btn-wrap align-center\">\n            <span mbr-icon class=\"popup-btn amp-iconfont fa-youtube-play fa\" on=\"tap:my-lightbox\" role=\"button\" tabindex=\"0\">\n            </span>\n            <span mbr-text class=\"icon-sign mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" mbr-if=\"showSignature\" data-app-selector=\".icon-sign\"><b>\n                Watch Video</b></span>\n        </div>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n            <a class=\"btn btn-md btn-white\" href=\"https://mobirise.com\">\n                LEARN MORE\n            </a>\n            <a class=\"btn btn-md btn-danger\" href=\"https://mobirise.com\">\n                LET'S BUILD\n            </a>\n        </div>\n    </div>\n</section>",
           "_cid": "r00P0IWnoe",
           "_anchor": "header6-i",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".image-block": {
+              "margin": "auto",
+              "width": "~\"@{imageSize}%\"",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "amp-img": {
+              "text-align": "center"
+            },
+            ".mbr-text": {
+              "margin": "0",
+              "padding": ".5rem 0",
+              "& when (@fullWidth)": {
+                "padding": ".5rem 15px"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".image-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "image2",
+          "_customHTML": "<section class=\"image2\" group=\"Images & Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\">\n        <input type=\"range\" inline title=\"Width\" name=\"imageSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showText\" checked>\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"image-block\">\n            <amp-img src=\"@PROJECT_PATH@/assets/images/talkingstickbgrd-1600x1200.png\" layout=\"responsive\" class=\"mobirise-loader\" width=\"613.3333333333333\" height=\"460\" alt=\"Mobirise\">\n                <div placeholder class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/talkingstickbgrd-1600x1200.png\" alt=\"Mobirise\" title>\n            </amp-img>\n            <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                <p mbr-text class=\"mbr-text mbr-black align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\"><b><i>\"Your Life Is About To Change For The Better!!!\"</i></b></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "r7jHjinVQl",
+          "_anchor": "image2-1t",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
